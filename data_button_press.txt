@@ -1,0 +1,3 @@
+Number button up: 3
+Number button down: 3
+Number actual usage elevator: 5
