@@ -77,6 +77,7 @@ void write_data_doc(int number_button_up,int number_button_down, int correct_usa
 		myfile << "Number button up: " << number_button_up << endl;
 		myfile << "Number button down: " << number_button_down << endl;
 		myfile << "Number actual usage elevator: " << correct_usage << endl;
+		myfile.close();
 		
 		cout << "Saving data on file" << endl;
 		}else{
@@ -112,6 +113,7 @@ void write_state_doc(int current_state){
 	ofstream myfile(FILE_STATE);
 	if(myfile.is_open()){
 		myfile << current_state;
+		myfile.close();
 		
 		cout << "Saving state on file" << endl;
 		}else{
