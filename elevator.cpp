@@ -143,7 +143,6 @@ void data_collection(int button, bool correct_instruction){
 	static int number_button_up = 0;
 	static int number_button_down = 0;
 	static int number_usage_elevator = 0;
-	static int number_save_data = 0;
 	
 	if(correct_instruction){number_usage_elevator = number_usage_elevator +1;}
 
@@ -158,12 +157,7 @@ void data_collection(int button, bool correct_instruction){
 	cout << "Data Collected!" << endl;
 	cout << "Number Usage Buttons: " << number_usage_elevator << endl;
 	
-	number_save_data = number_save_data +1;
-	
-	if(number_save_data > 5){
-		write_data_doc(number_button_up, number_button_down, number_usage_elevator);
-		number_save_data = 0;
-		}
+	write_data_doc(number_button_up, number_button_down, number_usage_elevator);
 
 	}
 	
