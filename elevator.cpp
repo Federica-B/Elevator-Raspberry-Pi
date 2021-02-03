@@ -88,6 +88,7 @@ void write_data_doc(int number_button_up,int number_button_down, int correct_usa
 int read_state_doc(){
 	string line;
 	ifstream myfile;
+	int value_return = -1;
 	
 	myfile.open(FILE_STATE);
 	if(myfile.is_open()){
@@ -96,14 +97,14 @@ int read_state_doc(){
 		{
 			//cout << line << endl;
 			char l = line[0];
-			return l - 48;
+			value_return = l - 48;
 		}
 		myfile.close();
 		}else {
 		cout << "Unable to open file"<< endl;
 		}
 	
-	return -1;
+	return value_return;
 	}
 	
 void write_state_doc(int current_state){
