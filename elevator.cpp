@@ -14,7 +14,7 @@ const string FILE_DATA = "data_button_press.txt";
 //Value of time 
 const long red_blinking = 500;
 
-const long foor_arrow = 3000;
+const long floor_arrow = 3000;
 const long floor_door = 1000;
 
 //GPIO for the button
@@ -168,7 +168,7 @@ void *controller_arrow(void* value){
 	
 	digitalWrite(value_led, true);
 	digitalWrite(general_white_led, true);
-	delay(foor_arrow);
+	delay(floor_arrow);
 	digitalWrite(value_led, false);
 	delay(floor_door);
 	digitalWrite(general_white_led, false);
